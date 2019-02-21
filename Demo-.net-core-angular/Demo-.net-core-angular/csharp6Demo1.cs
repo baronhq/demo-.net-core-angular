@@ -13,6 +13,21 @@ namespace Demo_.net_core_angular
         public bool a() => 1 == 1;
 
         public string b => a() + "aaa";
+
+        public void AA()
+        {
+            Person p = null;
+
+            int? age1 = p?.age;
+
+            var dict = new Dictionary<int, string>()
+            {
+                [1] = "one",
+                [2] = "two"
+            };
+        }
+
+        public override string ToString() => $"aaaa{b}{a()}";
     }
 
     public class Person
@@ -25,6 +40,16 @@ namespace Demo_.net_core_angular
         public void A(object o)
         {
             throw new ArgumentNullException(nameof(o));
+
+            try
+            {
+
+            }
+            catch (Exception ex) when (ex.Message == "")
+            {
+
+                throw;
+            }
         }
     }
 }
